@@ -23,7 +23,7 @@
 
 #include "macros.h"
 
-#define BOARD_BTT_SKR_MINI_E3_V1_0
+#define BOARD_BIGTREE_SKR_E3_DIP
 
 //
 // RAMPS 1.3 / 1.4 - ATmega1280, ATmega2560
