@@ -497,6 +497,16 @@
   #define DEFAULT_Ki 6.13
   #define DEFAULT_Kd 64.59
 
+  // MakerGear
+  //#define DEFAULT_Kp 7.0
+  //#define DEFAULT_Ki 0.1
+  //#define DEFAULT_Kd 12
+
+  // Mendel Parts V9 on 12V
+  //#define DEFAULT_Kp 63.0
+  //#define DEFAULT_Ki 2.25
+  //#define DEFAULT_Kd 440
+
 #endif // PIDTEMP
 
 //===========================================================================
