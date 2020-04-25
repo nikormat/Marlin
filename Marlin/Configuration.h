@@ -134,7 +134,6 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "EnderMan III"
 #define CUSTOM_MACHINE_NAME "EnderMan IV"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
