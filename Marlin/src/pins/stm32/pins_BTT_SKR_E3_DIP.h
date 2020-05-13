@@ -151,7 +151,7 @@
 //
 #define HEATER_0_PIN       PC8   // EXTRUDER
 #define HEATER_BED_PIN     PC9   // BED
-#define FAN_PIN            PA8
+//#define FAN_PIN            PA8
 #define E0_AUTO_FAN_PIN    PA8
 
 //
