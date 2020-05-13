@@ -468,7 +468,6 @@
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
 #define BED_MAXTEMP      150
-#define BED_MAXTEMP      125
 
 //===========================================================================
 //============================= PID Settings ================================
@@ -481,7 +480,7 @@
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #define PID_K1 0.95      // Smoothing factor within any PID loop
 #if ENABLED(PIDTEMP)
-  //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
+  #define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
   //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_DEBUG             // Sends debug data to the serial port. Use 'M303 D' to toggle activation.
   //#define PID_OPENLOOP 1        // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
@@ -492,6 +491,11 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
+  // Creality Ender-3 w/ Mosquito Hotend
+  #define DEFAULT_Kp 39.79
+  #define DEFAULT_Ki 6.13
+  #define DEFAULT_Kd 64.59
+
   // Creality Ender-3 w/ Mosquito Hotend
   #define DEFAULT_Kp 39.79
   #define DEFAULT_Ki 6.13
@@ -1475,17 +1479,14 @@
 //#define HOST_KEEPALIVE_FEATURE        // Disable this if your host doesn't like keepalive messages
 //#define DEFAULT_KEEPALIVE_INTERVAL 2  // Number of seconds between "busy" messages. Set with M113.
 //#define BUSY_WHILE_HEATING            // Some hosts require "busy" messages even during heating
-
 //
 // G20/G21 Inch mode support
 //
 //#define INCH_MODE_SUPPORT
-
 //
 // M149 Set temperature units support
 //
 //#define TEMPERATURE_UNITS_SUPPORT
-
 // @section temperature
 
 // Preheat Constants
@@ -2007,11 +2008,6 @@
 // (For CR-10 owners who want to replace the Melzi Creality board but retain the display)
 //
 #define CR10_STOCKDISPLAY
-
-//
-// Ender-2 OEM display, a variant of the MKS_MINI_12864
-//
-//#define ENDER2_STOCKDISPLAY
 
 //
 // ANET and Tronxy Graphical Controller
